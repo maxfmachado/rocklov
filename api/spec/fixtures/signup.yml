@@ -1,0 +1,46 @@
+
+---
+- title: nome em branco
+  payload:
+    name: ''
+    email: "joao@gmail.com"
+    password: mudar123
+  code: 412
+  error: required name
+
+- title: sem o campo nome
+  payload:
+    email: joao@gmail.com
+    password: mudar123
+  code: 412
+  error: required name
+
+- title: email em branco
+  payload:
+    name: João
+    email: ''
+    password: mudar123
+  code: 412
+  error: required email
+
+- title: sem o campo email
+  payload:
+    name: João
+    password: mudar123
+  code: 412
+  error: required email
+
+- title: senha branco
+  payload:
+    name: João
+    email: joao@gmail.com
+    password: ''
+  code: 412
+  error: required password
+  
+- title: sem o campo senha
+  payload:
+    name: João
+    email: joao@gmail.com
+  code: 412
+  error: required password
