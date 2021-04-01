@@ -19,4 +19,10 @@ pipeline {
             }
         }
     }
+
+    post {
+        always {
+            junit 'api/logs/report.xml'
+        }
+    }
 }
