@@ -15,7 +15,7 @@ Funcionalidade: Cadastro de Anúncios
             | nome      | Fender Strato |
             | categoria | Cordas        |
             | preco     | 200           |
-        Quando submeto o cadastro desse item
+        Quando submeto o cadastro desse item.
         Entao devo ver esse item no meu Dashboard
     
     Esquema do Cenario: Tentativa de cadastro de anuncios

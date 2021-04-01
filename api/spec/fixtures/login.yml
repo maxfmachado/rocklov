@@ -6,29 +6,34 @@
     password: mudar12q3
   code: 401
   error: Unauthorized
+
 - title: usuario nao existe
   payload:
     email: 404@gmail.com
     password: mudar123
   code: 401
   error: Unauthorized
+
 - title: email em branco
   payload:
     email: ''
     password: mudar123
   code: 412
   error: required email
+
 - title: sem o campo email
   payload:
     password: mudar123
   code: 412
   error: required email
-- title: sem em branco
+
+- title: senha em branco
   payload:
     email: max@gmail.com
     password: ''
   code: 412
   error: required password
+  
 - title: sem o campo senha
   payload:
     email: max@gmail.com
