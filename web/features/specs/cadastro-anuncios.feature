@@ -6,7 +6,7 @@ Funcionalidade: Cadastro de Anúncios
     Para que eu possa disponibilizá-los para locação
 
     Contexto: Login
-        * Login com "max@gmail.com" e "mudar123"
+        * Login com "max@hotmail.com" e "mudar123"
 
     Cenario: Novo Equipo
         Dado que acesso o formulário de cadastro de anúncios
@@ -17,7 +17,7 @@ Funcionalidade: Cadastro de Anúncios
             | preco     | 200           |
         Quando submeto o cadastro desse item
         Entao devo ver esse item no meu Dashboard
-    @temp
+    
     Esquema do Cenario: Tentativa de cadastro de anuncios
         Dado que acesso o formulário de cadastro de anúncios
             E que tenho o seguinte equipamento:
