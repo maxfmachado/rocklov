@@ -6,7 +6,7 @@ Funcionalidade: Remover Anúncios
     para que eu possa manter meu Dashboard atualizado
 
     Contexto: Login
-        * Login com "max@ig.com" e "mudar123"
+        * Login com "max@gmail.com" e "mudar123"
 
     
     Cenario: Remover um anúncio
@@ -20,7 +20,7 @@ Funcionalidade: Remover Anúncios
             E confirmo a exclusão
         Então não devo ver esse item no meu Dashboard
 
-    @temp
+
     Cenario: Desistir da exclusão de um anúncio
         Dado que tenho um anúncio indesejado:
             | thumb     | conga.jpg |
