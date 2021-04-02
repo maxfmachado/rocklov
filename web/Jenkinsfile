@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker{
-            image 'ruby'
+            image 'maxmachado/ruby-web-agent'
             args '--network rocklov-network'
         }
     }

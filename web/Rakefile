@@ -22,7 +22,7 @@ task :local_seeds do
   MongoDB.new.drop_danger
   MongoDB.new.insert_users(users)
 
-  sh "cucumber"
+  sh "cucumber -p jenkins"
 end
 
 task :hmg_seeds do
@@ -32,8 +32,6 @@ task :hmg_seeds do
     { name: "Max", email: "max@gmail.com", password: to_md5("mudar123") },
     { name: "Max", email: "max@hotmail.com", password: to_md5("mudar123") },
     { name: "Max", email: "max@ig.com", password: to_md5("mudar123") },
-    { name: "Maria Locataria", email: "maria@locataria.com", password: to_md5("mudar123") },
-    { name: "Joao Anunciante", email: "joao@anunciante.com", password: to_md5("mudar123") },
   ]
 
   MongoDB.new.drop_danger
