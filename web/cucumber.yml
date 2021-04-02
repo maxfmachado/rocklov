@@ -11,3 +11,4 @@ firefox: BROWSER=firefox
 fire_headless: BROWSER=fire_headless
 chrome: BROWSER=chrome
 chrome_headless: BROWSER=chrome_headless
+ 
