@@ -11,6 +11,14 @@ when "firefox"
 when "fire_headless"
   @driver = :selenium_headless
 when "chrome"
+  Capybara.register_driver :chrome do |app|
+    options = Selenium::WebDriver::Chrome::Options.new
+    options.add_argument("headless")
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
+    Capybara::Selenium::Driver.new(app, browser: :chrome, options: options)
+  end
+
   @driver = :selenium_chrome
 when "chrome_headless"
   Capybara.register_driver :selenium_chrome_headless do |app|
@@ -24,14 +32,6 @@ when "chrome_headless"
       opts.add_argument("--disable-dev-shm-usage")
     end
     Capybara::Selenium::Driver.new(app, **{ :browser => :chrome, options_key => browser_options })
-  end
-
-  Capybara.register_driver :chrome do |app|
-    options = Selenium::WebDriver::Chrome::Options.new
-    options.add_argument("headless")
-    options.add_argument("--no-sandbox")
-    options.add_argument("--disable-dev-shm-usage")
-    Capybara::Selenium::Driver.new(app, browser: :chrome, options: options)
   end
 
   @driver = :selenium_chrome_headless
